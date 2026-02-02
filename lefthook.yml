@@ -1,0 +1,7 @@
+pre-commit:
+  parallel: true
+  commands:
+    lint:
+      glob: '*.{ts,js}'
+      run: pnpm eslint --fix {staged_files}
+      stage_fixed: true

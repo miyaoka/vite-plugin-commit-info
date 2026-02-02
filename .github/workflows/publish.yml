@@ -1,0 +1,27 @@
+name: Publish to npm
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup environment
+        uses: ./.github/actions/setup-environment
+
+      - uses: actions/setup-node@v4
+        with:
+          registry-url: https://registry.npmjs.org
+
+      - name: Build
+        run: pnpm build
+
+      - name: Publish
+        run: npm publish --provenance --access public
