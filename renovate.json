@@ -9,6 +9,11 @@
       "description": "auto-merge tsgo dev preview daily releases",
       "matchPackageNames": ["@typescript/native-preview"],
       "automerge": true
+    },
+    {
+      "description": "Group Node.js runtime and type definitions",
+      "matchDepNames": ["node", "@types/node"],
+      "groupName": "node"
     }
   ]
 }
