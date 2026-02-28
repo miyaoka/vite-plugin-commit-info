@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@antfu/eslint-config':
         specifier: 7.4.3
-        version: 7.4.3(@vue/compiler-sfc@3.5.28)(eslint-plugin-format@2.0.0(eslint@10.0.2(jiti@2.6.1)))(eslint@10.0.2(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2))
+        version: 7.4.3(@vue/compiler-sfc@3.5.28)(eslint-plugin-format@2.0.1(eslint@10.0.2(jiti@2.6.1)))(eslint@10.0.2(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2))
       '@types/node':
         specifier: 24.10.13
         version: 24.10.13
@@ -24,8 +24,8 @@ importers:
         specifier: 10.0.2
         version: 10.0.2(jiti@2.6.1)
       eslint-plugin-format:
-        specifier: 2.0.0
-        version: 2.0.0(eslint@10.0.2(jiti@2.6.1))
+        specifier: 2.0.1
+        version: 2.0.1(eslint@10.0.2(jiti@2.6.1))
       lefthook:
         specifier: 2.1.1
         version: 2.1.1
@@ -1290,8 +1290,8 @@ packages:
     peerDependencies:
       eslint: '>=8'
 
-  eslint-plugin-format@2.0.0:
-    resolution: {integrity: sha512-XLPaXWEExzd4YdYpJ1bUedJBzgV3vACLPQHQCgrcxjQlX03L3+YqicCKuLp1SMzRdcYs3XLjAfs1UwT5csmOAA==}
+  eslint-plugin-format@2.0.1:
+    resolution: {integrity: sha512-0BA65p5DAiuKtx5MmMJfPk9WaTjoHHbyVW7ZXRhaZoA1fdiMHhay9QRiDL2wr0hJWZxdF7CRThOK/70VUKVg2g==}
     peerDependencies:
       eslint: ^8.40.0 || ^9.0.0 || ^10.0.0
 
@@ -2311,7 +2311,7 @@ packages:
 
 snapshots:
 
-  '@antfu/eslint-config@7.4.3(@vue/compiler-sfc@3.5.28)(eslint-plugin-format@2.0.0(eslint@10.0.2(jiti@2.6.1)))(eslint@10.0.2(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2))':
+  '@antfu/eslint-config@7.4.3(@vue/compiler-sfc@3.5.28)(eslint-plugin-format@2.0.1(eslint@10.0.2(jiti@2.6.1)))(eslint@10.0.2(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.18(@types/node@24.10.13)(jiti@2.6.1)(yaml@2.8.2))':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@clack/prompts': 1.0.1
@@ -2351,7 +2351,7 @@ snapshots:
       vue-eslint-parser: 10.4.0(eslint@10.0.2(jiti@2.6.1))
       yaml-eslint-parser: 2.0.0
     optionalDependencies:
-      eslint-plugin-format: 2.0.0(eslint@10.0.2(jiti@2.6.1))
+      eslint-plugin-format: 2.0.1(eslint@10.0.2(jiti@2.6.1))
     transitivePeerDependencies:
       - '@eslint/json'
       - '@vue/compiler-sfc'
@@ -3334,7 +3334,7 @@ snapshots:
       eslint: 10.0.2(jiti@2.6.1)
       eslint-compat-utils: 0.5.1(eslint@10.0.2(jiti@2.6.1))
 
-  eslint-plugin-format@2.0.0(eslint@10.0.2(jiti@2.6.1)):
+  eslint-plugin-format@2.0.1(eslint@10.0.2(jiti@2.6.1)):
     dependencies:
       '@dprint/formatter': 0.5.1
       '@dprint/markdown': 0.21.1
