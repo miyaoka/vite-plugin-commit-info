@@ -1,6 +1,9 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { commitInfoPlugin } from '../src'
 
+const HASH_PATTERN = /hash: "[0-9a-f]{40}"/
+const DATE_PATTERN = /date: \d+/
+
 describe('commitInfoPlugin', () => {
   const plugin = commitInfoPlugin()
   const resolveId = plugin.resolveId as (id: string) => string | undefined
@@ -43,9 +46,9 @@ describe('commitInfoPlugin with real git', () => {
     const result = load('\0virtual:commit-info')
 
     // Contains 40-character hex hash
-    expect(result).toMatch(/hash: "[0-9a-f]{40}"/)
+    expect(result).toMatch(HASH_PATTERN)
     // Contains positive integer timestamp
-    expect(result).toMatch(/date: \d+/)
+    expect(result).toMatch(DATE_PATTERN)
   })
 
   it('uses env vars over git commands', () => {
