@@ -57,7 +57,7 @@
     "@types/node": "24.12.2",
     "@typescript/native-preview": "7.0.0-dev.20260405.1",
     "bumpp": "11.0.1",
-    "eslint": "10.1.0",
+    "eslint": "10.2.0",
     "eslint-plugin-format": "2.0.1",
     "lefthook": "2.1.4",
     "tsdown": "0.21.7",
