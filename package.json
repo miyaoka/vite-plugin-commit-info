@@ -56,7 +56,7 @@
     "@antfu/eslint-config": "8.2.0",
     "@types/node": "24.12.2",
     "@typescript/native-preview": "7.0.0-dev.20260507.1",
-    "bumpp": "11.0.1",
+    "bumpp": "11.1.0",
     "eslint": "10.3.0",
     "eslint-plugin-format": "2.0.1",
     "lefthook": "2.1.6",
