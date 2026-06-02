@@ -59,7 +59,7 @@
     "bumpp": "11.1.0",
     "eslint": "10.4.0",
     "eslint-plugin-format": "2.0.1",
-    "lefthook": "2.1.8",
+    "lefthook": "2.1.9",
     "tsdown": "0.22.1",
     "typescript": "6.0.3",
     "vite": "8.0.14",
