@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "9.1.0",
-    "@types/node": "24.13.2",
+    "@types/node": "24.13.3",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
     "bumpp": "11.1.0",
     "eslint": "10.6.0",
