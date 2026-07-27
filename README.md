@@ -18,20 +18,20 @@ pnpm add -D @miyaoka/vite-plugin-commit-info
 
 ```ts
 // vite.config.ts
-import { commitInfoPlugin } from '@miyaoka/vite-plugin-commit-info'
-import { defineConfig } from 'vite'
+import { commitInfoPlugin } from "@miyaoka/vite-plugin-commit-info";
+import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [commitInfoPlugin()],
-})
+});
 ```
 
 ```ts
 // In your app
-import { commitInfo } from 'virtual:commit-info'
+import { commitInfo } from "virtual:commit-info";
 
-console.log(commitInfo.hash) // "abc1234..."
-console.log(commitInfo.date) // 1705312800 (UNIX timestamp)
+console.log(commitInfo.hash); // "abc1234..."
+console.log(commitInfo.date); // 1705312800 (UNIX timestamp)
 ```
 
 ## TypeScript

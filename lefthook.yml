@@ -1,7 +1,9 @@
 pre-commit:
-  parallel: true
-  commands:
-    lint:
-      glob: '*.{ts,js}'
-      run: pnpm eslint --fix {staged_files}
+  # pnpm fix と同じ内容を staged files に対して実行する。
+  # 逐次実行。oxlint --fix の書き換えを oxfmt が整形するため、この順序に依存する
+  jobs:
+    - run: pnpm fix:oxlint {staged_files}
+      stage_fixed: true
+
+    - run: pnpm fix:oxfmt {staged_files}
       stage_fixed: true

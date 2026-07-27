@@ -15,11 +15,11 @@
  * /// <reference types="@miyaoka/vite-plugin-commit-info/client" />
  * ```
  */
-declare module 'virtual:commit-info' {
+declare module "virtual:commit-info" {
   export const commitInfo: {
     /** Commit hash at build time */
-    hash: string
+    hash: string;
     /** Commit date at build time (UNIX timestamp) */
-    date: number
-  }
+    date: number;
+  };
 }

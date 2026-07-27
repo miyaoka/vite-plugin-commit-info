@@ -1,23 +1,29 @@
 {
   "name": "@miyaoka/vite-plugin-commit-info",
-  "type": "module",
   "version": "0.0.1",
   "description": "Vite plugin to provide commit info as a virtual module",
-  "author": "miyaoka",
+  "keywords": [
+    "build-info",
+    "commit",
+    "git",
+    "version",
+    "vite",
+    "vite-plugin"
+  ],
+  "bugs": "https://github.com/miyaoka/vite-plugin-commit-info/issues",
   "license": "MIT",
+  "author": "miyaoka",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/miyaoka/vite-plugin-commit-info.git"
   },
-  "bugs": "https://github.com/miyaoka/vite-plugin-commit-info/issues",
-  "keywords": [
-    "vite",
-    "vite-plugin",
-    "commit",
-    "git",
-    "version",
-    "build-info"
+  "files": [
+    "dist"
   ],
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.mts",
   "exports": {
     ".": {
       "import": {
@@ -33,36 +39,35 @@
       "types": "./dist/client.d.ts"
     }
   },
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.mts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown -w",
-    "lint": "eslint .",
+    "lint": "pnpm lint:oxlint && pnpm lint:oxfmt",
+    "lint:oxlint": "oxlint --type-aware --deny-warnings",
+    "lint:oxfmt": "oxfmt --check",
+    "fix": "pnpm fix:oxlint && pnpm fix:oxfmt",
+    "fix:oxlint": "oxlint --type-aware --fix --no-error-on-unmatched-pattern",
+    "fix:oxfmt": "oxfmt --no-error-on-unmatched-pattern",
     "typecheck": "tsgo",
     "test": "vitest",
     "test:run": "vitest --run",
     "prepublishOnly": "pnpm build",
     "release": "bumpp"
   },
-  "peerDependencies": {
-    "vite": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0"
-  },
   "devDependencies": {
-    "@antfu/eslint-config": "9.2.0",
     "@types/node": "24.13.3",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
     "bumpp": "12.0.0",
-    "eslint": "10.7.0",
-    "eslint-plugin-format": "2.0.1",
     "lefthook": "2.1.10",
+    "oxfmt": "0.60.0",
+    "oxlint": "1.75.0",
+    "oxlint-tsgolint": "7.0.2001",
     "tsdown": "0.22.13",
     "typescript": "6.0.3",
     "vite": "8.1.5",
     "vitest": "4.1.10"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0"
   }
 }
