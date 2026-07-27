@@ -1,5 +1,5 @@
 name: Setup Environment
-description: 'Common setup for mise, pnpm, and dependencies'
+description: "Common setup for mise, pnpm, and dependencies"
 
 runs:
   using: composite

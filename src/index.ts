@@ -1,8 +1,8 @@
-import type { Plugin } from 'vite'
-import { execSync } from 'node:child_process'
+import type { Plugin } from "vite";
+import { execSync } from "node:child_process";
 
-const VIRTUAL_MODULE_ID = 'virtual:commit-info'
-const RESOLVED_VIRTUAL_MODULE_ID = `\0${VIRTUAL_MODULE_ID}`
+const VIRTUAL_MODULE_ID = "virtual:commit-info";
+const RESOLVED_VIRTUAL_MODULE_ID = `\0${VIRTUAL_MODULE_ID}`;
 
 /**
  * Get commit hash at build time.
@@ -16,13 +16,13 @@ const RESOLVED_VIRTUAL_MODULE_ID = `\0${VIRTUAL_MODULE_ID}`
  */
 function getCommitHash(): string {
   if (process.env.COMMIT_HASH) {
-    return process.env.COMMIT_HASH
+    return process.env.COMMIT_HASH;
   }
 
   try {
-    return execSync('git rev-parse HEAD').toString().trim()
+    return execSync("git rev-parse HEAD").toString().trim();
   } catch {
-    return 'unknown'
+    return "unknown";
   }
 }
 
@@ -38,13 +38,13 @@ function getCommitHash(): string {
  */
 function getCommitDate(): string {
   if (process.env.COMMIT_DATE) {
-    return process.env.COMMIT_DATE
+    return process.env.COMMIT_DATE;
   }
 
   try {
-    return execSync('git show -s --format=%ct HEAD').toString().trim()
+    return execSync("git show -s --format=%ct HEAD").toString().trim();
   } catch {
-    return '0'
+    return "0";
   }
 }
 
@@ -64,21 +64,21 @@ function getCommitDate(): string {
  */
 export function commitInfoPlugin(): Plugin {
   return {
-    name: 'vite-plugin-commit-info',
+    name: "vite-plugin-commit-info",
     resolveId(id) {
       if (id === VIRTUAL_MODULE_ID) {
-        return RESOLVED_VIRTUAL_MODULE_ID
+        return RESOLVED_VIRTUAL_MODULE_ID;
       }
     },
     load(id) {
       if (id === RESOLVED_VIRTUAL_MODULE_ID) {
-        const hash = getCommitHash()
-        const date = getCommitDate()
+        const hash = getCommitHash();
+        const date = getCommitDate();
         return `export const commitInfo = {
   hash: ${JSON.stringify(hash)},
   date: ${Number(date)},
-};`
+};`;
       }
     },
-  }
+  };
 }
