@@ -21,8 +21,7 @@ function getCommitHash(): string {
 
   try {
     return execSync('git rev-parse HEAD').toString().trim()
-  }
-  catch {
+  } catch {
     return 'unknown'
   }
 }
@@ -44,8 +43,7 @@ function getCommitDate(): string {
 
   try {
     return execSync('git show -s --format=%ct HEAD').toString().trim()
-  }
-  catch {
+  } catch {
     return '0'
   }
 }

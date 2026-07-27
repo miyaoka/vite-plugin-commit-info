@@ -3,5 +3,8 @@ pre-commit:
   commands:
     lint:
       glob: '*.{ts,js}'
-      run: pnpm eslint --fix {staged_files}
+      run: pnpm oxlint --type-aware --fix {staged_files}
+      stage_fixed: true
+    format:
+      run: pnpm oxfmt {staged_files}
       stage_fixed: true
