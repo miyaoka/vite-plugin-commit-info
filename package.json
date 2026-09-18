@@ -58,7 +58,7 @@
     "@types/node": "24.13.4",
     "bumpp": "12.3.0",
     "lefthook": "2.1.14",
-    "oxfmt": "0.67.0",
+    "oxfmt": "0.68.0",
     "oxlint": "1.83.0",
     "oxlint-tsgolint": "7.0.2001",
     "tsdown": "0.23.0",
