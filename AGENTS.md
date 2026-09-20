@@ -1,4 +1,4 @@
-# CLAUDE.md
+# vite-plugin-commit-info
 
 ## Overview
 
