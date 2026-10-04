@@ -57,7 +57,7 @@
   "devDependencies": {
     "@types/node": "24.19.0",
     "bumpp": "12.3.0",
-    "lefthook": "2.1.14",
+    "lefthook": "2.1.16",
     "oxfmt": "0.71.0",
     "oxlint": "1.86.0",
     "oxlint-tsgolint": "7.0.2003",
