@@ -55,7 +55,7 @@
     "release": "bumpp"
   },
   "devDependencies": {
-    "@types/node": "24.19.2",
+    "@types/node": "26.6.5",
     "bumpp": "12.3.0",
     "lefthook": "2.2.1",
     "oxfmt": "0.74.0",
